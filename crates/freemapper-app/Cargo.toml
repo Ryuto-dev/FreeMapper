@@ -1,0 +1,24 @@
+[package]
+name = "freemapper-app"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-or-later"
+description = "FreeMapper app: wgpu (via eframe) quad spike + egui + ja/en i18n"
+
+[[bin]]
+name = "freemapper"
+path = "src/main.rs"
+
+[dependencies]
+freemapper-core = { path = "../freemapper-core" }
+eframe = { version = "0.32", default-features = false, features = ["default_fonts", "glow"] }
+egui = "0.32"
+image = "0.25"
+rfd = "0.15"
+ffmpeg-sidecar = "2"
+rosc = "0.11"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+syphon-rs = "0.2"

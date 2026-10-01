@@ -1,0 +1,3 @@
+[workspace]
+members = ["crates/freemapper-core", "crates/freemapper-app"]
+resolver = "2"
